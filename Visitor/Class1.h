@@ -6,5 +6,11 @@
 class Class1 : public StudyCaseInterface
 {
 public:
-	void access(class StudyCaseVisitorInterface *visitor);
+	Class1();
+	Class1(int value);
+	void access(StudyCaseVisitorInterface *visitor);
+	void setValue(int value);
+	int getValue();	
+private:
+	int value;
 };

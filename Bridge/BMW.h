@@ -3,10 +3,10 @@
 #include "Vehicle.h"
 #endif
 
-class VehicleDiesel: public Vehicle
+class BMW: public Vehicle
 {
 public:
-	VehicleDiesel(string model, Engine* engine);
+	BMW(string model, Engine* engine);
 	void start();
 	void stop();
 	void step_on_it(int x);

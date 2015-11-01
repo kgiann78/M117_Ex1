@@ -7,6 +7,9 @@ class Class1VisitorImplementation : public StudyCaseVisitorInterface
 {
 public:
 	void visit(Class1 *class1) {
-		 cout<<"alekos\n";
+		int currentValue = class1->getValue();
+		 cout<<"I will change the value from "<<currentValue;
+		 class1->setValue(++currentValue);
+		 cout<<" to "<<class1->getValue()<<endl;
 	}
 };
