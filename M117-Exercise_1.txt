@@ -1,0 +1,54 @@
+M117 - Exercise 1
+
+Konstantinos Giannousis M1400
+
+Η γλώσσα που επέλεξα είναι η C++ λόγω της μικρότερης εμπειρίας (και λόγω του μεγάλου διαστήματος που έχει περάσει από την τελευταία ενασχόληση).
+
+Bridge
+
+Το παράδειγμα παρουσιάζει ένα set κλάσεις (BMW & MercedesBenz) που κληρονομούν την κλάση όχημα (Vehicle). Οι κλάσεις αυτές θεωρούνται οι  κλάσεις abstraction γιατί διαθέτουν έχουν ένα αντικείμενο τύπου Engine το οποίο μπορεί να είναι είτε Petrol είτε Diesel ανάλογα με την υλοποίηση που θέλουμε να κάνουμε. Τα τελευταία θα θεωρούνται οι κλάσεις implementation. Με τον τρόπο αυτό αποφεύγεται η υλοποίηση πολλαπλών κλάσεων οχημάτων για τους διαφορετικούς τύπους μηχανών και το δέσιμο μεταξύ κλάσεις abstraction και implementation.
+
+Στην υλοποίηση του συγκεκριμένου pattern δεν χρησιμοποιήθηκαν templates αλλά μόνο υπερφόρτωση/overloading μεθόδων. Αν γινόταν υλοποίηση σε κάποια άλλη γλώσσα (Java ή C#) θα γινόταν χρήση των interfaces τα οποία θα παρείχαν τις δηλώσεις των μεθόδων για τις κλάσεις abstraction και implementation.
+
+Στο συγκεκριμένο παράδειγμα:
+
+Abstraction Classes:
+Vehicle
+BMW
+MercedesBenz
+
+Implementation Classes:
+Engine
+Petrol
+Diesel
+
+Build:
+make
+
+Run:
+make run
+
+Clean:
+make clean
+
+
+Observer
+
+Το παράδειγμα παρουσιάζει μια υλοποίηση τύπου property change notifier με την οποία ένα αντικείμενο που κληρονομεί την κλάση PropertyChangeNotifier μπορεί να ενημερώνει (ή να ενημερώνεται) για αλλαγές σε μια τιμή μεταβλητής/ων του αντικειμένου.
+
+Έτσι στο παράδειγμα αυτό, παρέχεται η κλάση PropertyChangeNotifier (μέσω της οποίας παρέχεται πρόσβαση στο Notifier), μια κλάση αισθητήρας (HumiditySensor) η οποία υλοποιεί την PropertyChangeNotifier και στέλνει ενημερώσεις (notifications) για αλλαγές στη μεταβλητή humidity καθώς και δυο κλάσεις controllers (WaterController, ShadeController) οι οποίες "εγγράφονται" (subscribe) στο Notifier και λαμβάνουν ενημερώσεις έτσι ώστε να εκτελούν με τη σειρά τους εντολές ανάλογα του ρόλου τους.
+
+Το παράδειγμα επιλέγχθηκε με τέτοιο τρόπο ώστε να δείχνει καθαρά τη λειτουργία Publisher/Subscriber όπου η κλάση αισθητήρας είναι ο Publisher και οι δυο controllers είναι οι subscribers.
+
+Build:
+make
+
+Run:
+make run
+
+Clean:
+make clean
+
+Visitor
+
+Το παράδειγμα 
